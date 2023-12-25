@@ -26,13 +26,9 @@ const AuthProvider = ({children}) => {
 
     const signInGoogle = () => {
         setLoading(true);
-        return signInWithPopup(auth, GoogleAuthProvider);
+        return signInWithPopup(auth, googleProvider);
     }
 
-    // const signInFacebook = () => {
-    //     setLoading(true);
-    //     return signInWithPopup(auth, faceBookProvider);
-    // }
 
     const logOutUser = () => {
         setLoading(true);
@@ -59,7 +55,7 @@ const authInfo = {
       loading,
       user,
       logOutUser,
-    //   signInFacebook
+
 }
 
     return (

@@ -1,3 +1,4 @@
+import KanbanBoard from "./KanbanBoard";
 import PostToDo from "./PostToDo";
 import Profile from "./Profile";
 
@@ -13,8 +14,8 @@ const Dashboard = () => {
                 <Profile></Profile>
                 
             </div>
-            {/* <KanbanBoard></KanbanBoard> */}
-            d
+            <KanbanBoard></KanbanBoard>
+            
         </div>
     );
 };

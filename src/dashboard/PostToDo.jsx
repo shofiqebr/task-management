@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import useGetAllTodo from "../hook/useAllToDo";
 import { Controller, useForm } from "react-hook-form";
 import useAxiosPublic from "../hook/useAxiosPublic";
 import { ContextProvider } from "../provider/AuthProvider";
@@ -7,6 +6,7 @@ import toast from "react-hot-toast";
 import ClearIcon from '@mui/icons-material/Clear';
 import HourglassTopIcon from '@mui/icons-material/HourglassTop';
 import { Backdrop, Box, Button, Container, CssBaseline, Fade, FormControl, Grid, IconButton, InputLabel, MenuItem, Modal, Select, TextField, Typography } from "@mui/material";
+import useAllTodo from "../hook/useAllToDo";
 
 
 
@@ -26,7 +26,7 @@ const PostToDo = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const [, refetch] = useGetAllTodo();
+    const [, refetch] = useAllTodo();
 
     const { handleSubmit, control } = useForm();
     const axiosPublic = useAxiosPublic()
