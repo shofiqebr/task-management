@@ -1,7 +1,7 @@
 import Banner from "../../Banner";
 import User from "./User";
 import Navbar from "./navbar";
-// import Footer from "./footer";
+
 
 
 
