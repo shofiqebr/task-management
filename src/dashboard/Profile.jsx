@@ -22,7 +22,8 @@ const Profile = () => {
     const handleClose = () => setOpen(false);
     const { user } = useContext(ContextProvider);
     const [todoData] = useAllTodo();
-    const ownData = todoData.filter(item => item.email === user.email);
+    // const ownData = todoData.filter(item => item.email === user.email);
+    const ownData = Array.isArray(todoData) ? todoData.filter(item => item.email === user.email) : [];
     const ownTodo = ownData.filter(item => item.status == 'todo');
     const ownOnGoing = ownData.filter(item => item.status == 'onGoing');
     const ownComplete = ownData.filter(item => item.status == 'complete');

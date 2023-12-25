@@ -13,9 +13,12 @@ export default function KanbanBoard() {
     const [todoData, refetch] = useAllTodo();
     const [isTrue,setIsTrue] = useState(false);
 
-    const todo = todoData.filter(item => item.status == 'todo');
-    const onGoing = todoData.filter(item => item.status == 'onGoing');
-    const complete = todoData.filter(item => item.status == 'complete');
+    // const todo = todoData.filter(item => item.status == 'todo');
+    // const onGoing = todoData.filter(item => item.status == 'onGoing');
+    // const complete = todoData.filter(item => item.status == 'complete');
+    const todo = Array.isArray(todoData) ? todoData.filter(item => item.status == 'todo') : [];
+    const onGoing = Array.isArray(todoData) ? todoData.filter(item => item.status == 'onGoing') : [];
+    const complete = Array.isArray(todoData) ? todoData.filter(item => item.status == 'complete') : [];
 
     
     const handleDragEnd = (result) => {
